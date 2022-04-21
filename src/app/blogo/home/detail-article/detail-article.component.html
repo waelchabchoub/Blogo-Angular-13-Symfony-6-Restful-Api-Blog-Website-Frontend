@@ -1,0 +1,43 @@
+  <div class="col-md-12 col-sm-12" *ngIf="selectedArticle">
+    <div class="card-container">
+       <div class="card">
+           <div class="front">
+               <div class="cover">
+                   <img src="assets/images/rotating_card_thumb2.png">
+               </div>
+               <div class="user">
+                   <img class="img-circle" src="https://media.istockphoto.com/photos/isolated-yellow-note-picture-id144324690?k=20&m=144324690&s=612x612&w=0&h=4XkjqNg0t96cyN4DSeFo9z0fcdIANUWrR4rYV6zeghE=">
+               </div>
+               <div class="content">
+                   <div class="main">
+                       <h3 class="name">{{selectedArticle.name}}</h3>
+                       <p class="profession"></p>
+                       <p class="text-center">Author : {{selectedArticle.author.email}}</p>
+                   </div>
+                   <div class="footer">
+                       <i class="fa fa-mail-forward"></i> Auto Rotation
+                   </div>
+               </div>
+           </div> <!-- end front panel -->
+           <div class="back">
+               <div class="header">
+                   <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+               </div>
+               <div class="content">
+                   <div class="main">
+                       <h4 class="text-center">{{selectedArticle.content}}</h4>
+                       
+
+                   </div>
+               </div>
+               <div class="footer">
+                   <!--div class="social-links text-center">
+                       
+                       <button (click)="viewMore()" class="btn btn-primary">More details</button>
+                   </div-->
+                   
+               </div>
+           </div> <!-- end back panel -->
+       </div> <!-- end card -->
+   </div> <!-- end card-container -->
+</div>

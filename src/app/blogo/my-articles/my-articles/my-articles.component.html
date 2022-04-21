@@ -1,0 +1,18 @@
+<div class="row">
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" #filterInput>
+        <button class="btn btn-outline-success" type="submit" (click)="filterArticle(filterInput.value)">Search</button>
+    </form>
+    <div class="col-md-6 col-sm-3">
+        <app-my-article-list [articles]="articles" (selectedArticleToDad)="processReq($event)"></app-my-article-list>
+    </div>
+    <div class="col-md-6 col-sm-9">
+        <app-my-article-detail [selectedArticle]="selectedArticle"></app-my-article-detail>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <button [disabled]="currentPage==1" class="page-item btn btn-primary"><a class="page-link" (click)="previous()">Previous</a></button>
+      <button [disabled]="articles.length==0" class="page-item btn btn-primary"><a class="page-link" (click)="next()">Next</a></button>
+    </ul>
+  </nav>

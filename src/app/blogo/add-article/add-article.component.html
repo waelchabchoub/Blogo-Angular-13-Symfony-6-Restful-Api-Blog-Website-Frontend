@@ -1,0 +1,10 @@
+<form #articleFormulaire="ngForm">
+    <label for="name">Name</label>
+    <input class="form-control" id="name" name="name" type="text" ngModel required> 
+    <label for="content">Content</label>
+    <textarea class="form-control" id="content" name="content" rows="5" cols="33" ngModel required></textarea>
+    
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-success" [disabled]="articleFormulaire.invalid" (click)="addPost(articleFormulaire)" >Add</button>
+    </div>
+</form>

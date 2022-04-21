@@ -1,0 +1,3 @@
+<ol class="list-group" *ngFor="let article of articles">
+    <app-article-item [article]="article" (selectedArticle)="processReq($event)"></app-article-item>
+</ol>

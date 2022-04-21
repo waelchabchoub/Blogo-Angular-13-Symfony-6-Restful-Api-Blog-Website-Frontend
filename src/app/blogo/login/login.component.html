@@ -1,0 +1,14 @@
+<div class="alert alert-danger" *ngIf="errorMessage">
+    {{errorMessage}}
+</div>
+
+<form #formulaire="ngForm">
+    <label for="email">E-mail</label>
+    <input class="form-control" name="email" id="email" type="text" ngModel>
+    <label for="password">Password</label>
+    <input class="form-control" name="password" id="password" type="password" ngModel>
+    <a [routerLink]="['/blogo/signup']">Create an account</a>
+    <div class="d-flex justify-content-center">
+    <button class="btn btn-success text-center" (click)="login(formulaire.value)">Login</button>
+    </div>
+</form>

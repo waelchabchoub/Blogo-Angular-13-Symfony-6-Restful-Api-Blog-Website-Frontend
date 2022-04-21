@@ -1,0 +1,13 @@
+<form #articleFormulaire="ngForm">
+    <label for="name">Name</label>
+    <input class="form-control" id="name" name="name" type="text" [(ngModel)]="article.name" required> 
+    <label for="content">Content</label>
+    <textarea class="form-control" id="content" name="content" rows="5" cols="33" [(ngModel)]="article.content"required></textarea>
+    
+    <label for="author_email">Author</label>
+    <input class="form-control" id="author_email" name="author_email" type="text" [value]="article.author.email" disabled>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-success"(click)="updatePost()">Update</button>
+        <button class="btn btn-danger" (click)="deletePost()">Delete</button>
+    </div>
+</form>
